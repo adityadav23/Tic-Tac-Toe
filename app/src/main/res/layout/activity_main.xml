@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/acme"
         android:text="@string/game_title"
+        android:textColor="#512DA8"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -41,6 +42,7 @@
             android:layout_width="90dp"
             android:layout_height="90dp"
             android:layout_margin="10dp"
+            android:textSize="50sp"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <Button
@@ -48,6 +50,7 @@
             android:layout_width="90dp"
             android:layout_height="90dp"
             android:layout_margin="10dp"
+            android:textSize="50sp"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <Button
@@ -55,6 +58,7 @@
             android:layout_width="90dp"
             android:layout_height="90dp"
             android:layout_margin="10dp"
+            android:textSize="50sp"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <Button
@@ -62,6 +66,7 @@
             android:layout_width="90dp"
             android:layout_height="90dp"
             android:layout_margin="10dp"
+            android:textSize="50sp"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <Button
@@ -69,6 +74,7 @@
             android:layout_width="90dp"
             android:layout_height="90dp"
             android:layout_margin="10dp"
+            android:textSize="50sp"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <Button
@@ -76,6 +82,7 @@
             android:layout_width="90dp"
             android:layout_height="90dp"
             android:layout_margin="10dp"
+            android:textSize="50sp"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <Button
@@ -83,6 +90,7 @@
             android:layout_width="90dp"
             android:layout_height="90dp"
             android:layout_margin="10dp"
+            android:textSize="50sp"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <Button
@@ -90,6 +98,7 @@
             android:layout_width="90dp"
             android:layout_height="90dp"
             android:layout_margin="10dp"
+            android:textSize="50sp"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <Button
@@ -97,6 +106,7 @@
             android:layout_width="90dp"
             android:layout_height="90dp"
             android:layout_margin="10dp"
+            android:textSize="50sp"
             tools:ignore="SpeakableTextPresentCheck" />
     </GridLayout>
 
