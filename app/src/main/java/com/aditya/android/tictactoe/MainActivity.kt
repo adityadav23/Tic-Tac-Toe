@@ -74,96 +74,46 @@ class MainActivity : AppCompatActivity() {
         win()
     }
 
-    fun win(){
-        if(binding.button1.text == "X" && binding.button2.text =="X" && binding.button3.text =="X"){
+    fun win() {
+        if ((binding.button1.text == "X" && binding.button2.text == "X" && binding.button3.text == "X")
+            || (binding.button4.text == "X" && binding.button5.text == "X" && binding.button6.text == "X")
+            || (binding.button7.text == "X" && binding.button8.text == "X" && binding.button9.text == "X")
+            || (binding.button1.text == "X" && binding.button5.text == "X" && binding.button9.text == "X")
+            || (binding.button3.text == "X" && binding.button5.text == "X" && binding.button7.text == "X")
+            || (binding.button1.text == "X" && binding.button4.text == "X" && binding.button7.text == "X")
+            || (binding.button2.text == "X" && binding.button5.text == "X" && binding.button8.text == "X")
+            || (binding.button3.text == "X" && binding.button6.text == "X" && binding.button9.text == "X")
+        ) {
             toast("PLAYER 1")
             disableButton(false)
-        }
-        if(binding.button4.text == "X" && binding.button5.text =="X" && binding.button6.text =="X"){
-            toast("PLAYER 1")
-            disableButton(false)
-
-        }
-        if(binding.button7.text == "X" && binding.button8.text =="X" && binding.button9.text =="X"){
-            toast("PLAYER 1")
-            disableButton(false)
-
-        }
-        if(binding.button1.text == "0" && binding.button2.text =="0" && binding.button3.text =="0"){
+        } else if ((binding.button1.text == "0" && binding.button2.text == "0" && binding.button3.text == "0")
+            || (binding.button4.text == "0" && binding.button5.text == "0" && binding.button6.text == "0")
+            || (binding.button7.text == "0" && binding.button8.text == "0" && binding.button9.text == "0")
+            || (binding.button1.text == "0" && binding.button5.text == "0" && binding.button9.text == "0")
+            || (binding.button3.text == "0" && binding.button5.text == "0" && binding.button7.text == "0")
+            || (binding.button1.text == "0" && binding.button4.text == "0" && binding.button7.text == "0")
+            || (binding.button2.text == "0" && binding.button5.text == "0" && binding.button8.text == "0")
+            || (binding.button3.text == "0" && binding.button6.text == "0" && binding.button9.text == "0")
+        ) {
             toast("PLAYER 2")
             disableButton(false)
 
         }
-        if(binding.button4.text == "0" && binding.button5.text =="0" && binding.button6.text =="0"){
-            toast("PLAYER 2")
-            disableButton(false)
-
-
-        }
-        if(binding.button7.text == "0" && binding.button8.text =="0" && binding.button9.text =="0"){
-            toast("PLAYER 2")
-            disableButton(false)
-
-
-        }
-        if(binding.button1.text == "X" && binding.button5.text =="X" && binding.button9.text =="X"){
-            toast("PLAYER 1")
-            disableButton(false)
-
-        }
-        if(binding.button1.text == "0" && binding.button5.text =="0" && binding.button9.text =="0"){
-            toast("PLAYER 2")
-            disableButton(false)
-
-
-        }
-        if(binding.button3.text == "X" && binding.button5.text =="X" && binding.button7.text =="X"){
-            toast("PLAYER 1")
-            disableButton(false)
-
-
-        }
-        if(binding.button3.text == "0" && binding.button5.text =="0" && binding.button7.text =="0"){
-            toast("PLAYER 2")
-            disableButton(false)
-
-
-        }
-        if(binding.button1.text == "X" && binding.button4.text =="X" && binding.button7.text =="X"){
-            toast("PLAYER 1")
-            disableButton(false)
-
-
-        }
-        if(binding.button2.text == "X" && binding.button5.text =="X" && binding.button8.text =="X"){
-            toast("PLAYER 1")
-            disableButton(false)
-
-
-        }
-        if(binding.button3.text == "X" && binding.button6.text =="X" && binding.button9.text =="X"){
-            toast("PLAYER 1")
-            disableButton(false)
-
-
-        }
-        if(binding.button1.text == "0" && binding.button4.text =="0" && binding.button7.text =="0"){
-            toast("PLAYER 2")
-            disableButton(false)
-
-
-        }
-        if(binding.button2.text == "0" && binding.button5.text =="0" && binding.button8.text =="0"){
-            toast("PLAYER 2")
-            disableButton(false)
-
-
-        }
-        if(binding.button3.text == "0" && binding.button6.text =="0" && binding.button9.text =="0"){
-            toast("PLAYER 2")
+        else if(binding.button1.text != "" &&
+                binding.button2.text != "" &&
+                binding.button3.text != "" &&
+                binding.button4.text != "" &&
+                binding.button5.text != "" &&
+                binding.button6.text != "" &&
+                binding.button7.text != "" &&
+                binding.button8.text != "" &&
+                binding.button9.text != ""){
+            toast("GAME DRAW")
             disableButton(false)
         }
     }
+
+
     fun reset(){
         binding.button1.text = ""
         binding.button2.text = ""
@@ -174,9 +124,11 @@ class MainActivity : AppCompatActivity() {
         binding.button7.text = ""
         binding.button8.text = ""
         binding.button9.text = ""
+        binding.resultTextview.text = ""
+        player ="PLAYER1"
     }
     fun toast(winner:String){
-        Toast.makeText(this,"Winner is $winner", Toast.LENGTH_SHORT).show()
+        binding.resultTextview.text = winner
     }
 
     fun disableButton(isEnabled: Boolean){
